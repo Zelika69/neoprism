@@ -3,9 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     navPlaceholder.id = 'nav-placeholder';
     document.body.prepend(navPlaceholder);
 
-    // Adjust the path to nav.html based on the current page's location
-    const isSubdirectory = window.location.pathname.includes('/pages/');
-    const navPath = isSubdirectory ? '../components/nav.html' : 'components/nav.html';
+    // Use absolute path for nav.html
+    const navPath = '/components/nav.html';
 
     fetch(navPath)
         .then(response => response.text())
@@ -14,8 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Now that the nav is loaded, load the main script
             const script = document.createElement('script');
-            const mainScriptPath = isSubdirectory ? '../js/main.js' : 'js/main.js';
-            script.src = mainScriptPath;
+            script.src = '/js/main.js';
             script.onload = function() {
                 // Initialize menu after script loads
                 if (typeof initializeMenu === 'function') {
