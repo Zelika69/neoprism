@@ -6,16 +6,8 @@
   <title>Contacto - NeoPrism</title>
   <link rel="icon" href="../assets/neoprism.svg" type="image/svg+xml" /> 
   <link rel="stylesheet" href="../css/style.css" />
-  <script>
-    fetch('../components/nav.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('nav-placeholder').innerHTML = data;
-      });
-  </script>
 </head>
 <body>
-  <div id="nav-placeholder"></div>
 
   <main class="container">
     <section class="page-content">
@@ -65,5 +57,6 @@
       </div>
     </section>
   </main>
+<script src="../js/nav-loader.js"></script>
 </body>
 </html>

@@ -14,38 +14,13 @@
       <div class="menu" id="menu">
         <div class="menu-inner">
           <a href="../index.html">Inicio</a>
-          <a href="servicios.html">Servicios</a>
-          <!-- <a href="portafolio.html">Portafolio</a>
-          <a href="precios.html">Precios</a> -->
-          <a href="nosotros.html">Nosotros</a>
-          <a href="contacto.html">Contacto</a>
+          <a href="../pages/servicios.html">Servicios</a>
+          <!-- <a href="../pages/portafolio.html">Portafolio</a>
+          <a href="../pages/precios.html">Precios</a> -->
+          <a href="../pages/nosotros.html">Nosotros</a>
+          <a href="../pages/contacto.html">Contacto</a>
         </div>
       </div>
     </div>
   </nav>
 </header>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    
-    menuToggle.addEventListener('click', function() {
-      menu.classList.toggle('active');
-      menuToggle.classList.toggle('active');
-    });
-    
-    // Highlight active page
-    const currentPage = window.location.pathname.split('/').pop();
-    const menuLinks = document.querySelectorAll('.menu a');
-    
-    menuLinks.forEach(link => {
-      const linkPage = link.getAttribute('href').split('/').pop();
-      if (linkPage === currentPage || 
-          (currentPage === '' && linkPage === '../index.html') ||
-          (currentPage === 'index.html' && linkPage === '../index.html')) {
-        link.classList.add('active');
-      }
-    });
-  });
-</script>

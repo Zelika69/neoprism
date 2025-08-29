@@ -6,16 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosotros - NeoPrism</title>
     <link rel="stylesheet" href="../css/style.css">
-    <script>
-        fetch('../components/nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').innerHTML = data;
-            });
-    </script>
 </head>
 <body>
-    <div id="nav-placeholder"></div>
 
   <main class="container">
     <section class="page-content">
@@ -45,5 +37,6 @@
       </div>
     </section>
   </main>
+<script src="../js/nav-loader.js"></script>
 </body>
 </html>
