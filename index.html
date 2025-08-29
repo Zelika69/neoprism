@@ -1,38 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Neoprism</title>
-  <link rel="icon" href="neoprism.svg" type="image/svg+xml" /> 
-  <link rel="stylesheet" href="style.css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoPrism - Innovación Digital</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#">
-        <img src="neoprism.svg" alt="NeoPrism Logo" class="brand-logo" />
-        <span>NeoPrism</span>
-      </a>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="brand">
+                    <img src="assets/neoprism.svg" alt="NeoPrism" class="brand-logo">
+                    <span class="brand-text">NeoPrism</span>
+                </div>
+                <div class="menu-toggle" id="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="menu" id="menu">
+                    <div class="menu-inner">
+                        <a href="index.html" class="active">Inicio</a>
+                        <a href="pages/servicios.html">Servicios</a>
+                        <a href="pages/portafolio.html">Portafolio</a>
+                        <a href="pages/precios.html">Precios</a>
+                        <a href="pages/nosotros.html">Nosotros</a>
+                        <a href="pages/contacto.html">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-      <input type="checkbox" id="menu-toggle" />
-      <label class="hamburger" for="menu-toggle">
-        <span class="l1"></span>
-        <span class="l2"></span>
-        <span class="l3"></span>
-      </label>
-
-      <nav class="menu">
-        <div class="menu-inner">
-          <a href="#servicios">Servicios</a>
-          <a href="#portafolio">Portafolio</a>
-          <a href="#precios">Precios</a>
-          <a href="#nosotros">Nosotros</a>
-          <a href="#contacto">Contacto</a>
+  <main class="container">
+    <section class="page-content">
+      <h1>Bienvenido a NeoPrism</h1>
+      <p>Transformamos ideas en experiencias digitales excepcionales. Somos especialistas en desarrollo web, diseño UX/UI y consultoría digital.</p>
+      
+      <div class="hero-content">
+        <div class="hero-section">
+          <h3>Innovación Digital</h3>
+          <p>Utilizamos las últimas tecnologías para crear soluciones web modernas y eficientes que impulsen tu negocio hacia el futuro.</p>
         </div>
-      </nav>
-    </div>
-  </header>
+        
+        <div class="hero-section">
+          <h3>Diseño Centrado en el Usuario</h3>
+          <p>Creamos interfaces intuitivas y atractivas que ofrecen experiencias excepcionales a tus usuarios.</p>
+        </div>
+        
+        <div class="hero-section">
+          <h3>Resultados Medibles</h3>
+          <p>Nos enfocamos en entregar soluciones que generen un impacto real y medible en tu organización.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menu = document.getElementById('menu');
+            
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

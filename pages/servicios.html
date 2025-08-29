@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - NeoPrism</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        fetch('../components/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+  <main class="container">
+    <section class="page-content">
+      <h1>Nuestros Servicios</h1>
+      <p>Descubre los servicios que ofrecemos en NeoPrism para impulsar tu negocio.</p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Desarrollo Web</h3>
+          <p>Creamos sitios web modernos y responsivos adaptados a tus necesidades.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>Diseño UX/UI</h3>
+          <p>Diseñamos interfaces intuitivas y atractivas para mejorar la experiencia del usuario.</p>
+        </div>
+        
+        <div class="service-card">
+          <h3>Consultoría Digital</h3>
+          <p>Te ayudamos a definir la mejor estrategia digital para tu empresa.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

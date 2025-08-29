@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - NeoPrism</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script>
+        fetch('../components/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+  <main class="container">
+    <section class="page-content">
+      <h1>Nuestro Portafolio</h1>
+      <p>Explora algunos de nuestros proyectos más destacados.</p>
+      
+      <div class="portfolio-grid">
+        <div class="project-card">
+          <h3>Proyecto E-commerce</h3>
+          <p>Plataforma de comercio electrónico con diseño moderno y funcionalidades avanzadas.</p>
+          <div class="tech-stack">React • Node.js • MongoDB</div>
+        </div>
+        
+        <div class="project-card">
+          <h3>App Móvil Corporativa</h3>
+          <p>Aplicación móvil para gestión empresarial con interfaz intuitiva.</p>
+          <div class="tech-stack">React Native • Firebase</div>
+        </div>
+        
+        <div class="project-card">
+          <h3>Dashboard Analytics</h3>
+          <p>Panel de control para análisis de datos en tiempo real.</p>
+          <div class="tech-stack">Vue.js • Python • PostgreSQL</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
